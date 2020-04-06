@@ -7,3 +7,6 @@
 
 # - locale: en
   # flag: /static/assets/img/flags/United-States.png
+
+- locale: kr
+  flag: /static/assets/img/flags/South-Korea.png
