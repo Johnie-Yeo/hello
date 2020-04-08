@@ -13,7 +13,7 @@ icon: icon-html
 
 > [그런 REST API로 괜찮은가](https://youtu.be/RP_f5dMoHFc?t=0s) 영상을 기반으로 한 문서입니다.
 >
-> 이전의 [REST](https://johnie-yeo.github.io/hello/back-end/2020/04/06/REST.html) 이후 내용이 이어집니다.
+> 이전의 [REST](https://johnie-yeo.github.io/hello/back-end/2020/04/08/REST.html) 이후 내용이 이어집니다.
 
 ## RESTful API란
 
@@ -23,7 +23,7 @@ RESTful이란 말 그대로 REST 아키텍쳐 스타일을 따르는 것을 말�
 
 따라서 당연히 RESTful API는 REST  아키텍쳐 스타일을 따르는 API를 지칭하게 되는 것입니다.
 
-REST에 대해 [이전 글](https://johnie-yeo.github.io/hello/back-end/2020/04/06/REST.html) 에서 설명하며 오늘 날 RESTful API는 사실 REST하지 않고 REST는 성공이지만 REST API는 성공이라고 할 수 없다고 언급하였습니다. 
+REST에 대해 [이전 글](https://johnie-yeo.github.io/hello/back-end/2020/04/08/REST.html) 에서 설명하며 오늘 날 RESTful API는 사실 REST하지 않고 REST는 성공이지만 REST API는 성공이라고 할 수 없다고 언급하였습니다. 
 
 REST API가 성공이 아닌 이유는 자명하게도 REST를 지키지 못하기때문입니다. 
 
@@ -197,7 +197,7 @@ hateoas의 경우 data, 헤더 모두 활용할 수 있고 이 방법이 더 좋
 
 - 마지막으로 한번 더 강조해 보자면 REST는 긴 시간에 걸쳐 진화하는 웹 애플리케이션을 위한 것입니다. 따라서 절대 쉽지 않다는 트레이드 오프가 따르게 되는 것입니다.
 
-
+<br><br>
 
 
 > #### Reference
