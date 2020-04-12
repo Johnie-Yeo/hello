@@ -9,7 +9,7 @@ tags: [BackEnd, api, network, http, rest, restful]
 icon: icon-html
 ---
 
-<p align="center"><img src="https://miro.medium.com/max/1198/1*gV9AeJImpGRTlDs_560erw.png"  /></p>
+<p align="center"><img src="https://miro.medium.com/max/1198/1*gV9AeJImpGRTlDs_560erw.png" style="width: 50vw; height: auto;" /></p>
 
 > [그런 REST API로 괜찮은가](https://youtu.be/RP_f5dMoHFc?t=0s) 영상을 기반으로 한 문서입니다.
 >
@@ -55,10 +55,11 @@ REST API가 가장 지켜지지 않는 Uniform interface의 self descriptive와 
 
 웹을 구성하는 HTML과 API의 경우 JSON 혹은 XML로 메세지가 전달되는 경우가 대부분이므로 HTML과 JSON에 대해 비교해보겠습니다.
 
-|                  | HTML             | JSON               |
-| ---------------- | ---------------- | ------------------ |
-| Hyperlink        | 가능( a 태그 등) | 정의되어 있지 않음 |
-| Self-descriptive | 가능( HTML 명세) | **불완전**         |
+<br>
+
+<p><img src="{{ site.img_path }}/restfulapi/HTMLvsJSON.png" style="width: 70vw; height: auto;"/></p>
+
+<br>
 
 Hyperlink에 대해 이야기 해보면 HTML에서는 a태그와 같은 형식으로 하이퍼 링크를 표현할 수 있습니다.
 
