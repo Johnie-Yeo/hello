@@ -7,8 +7,8 @@
 ### Back end
 
 - [x] RESTful API
-- [ ] GraphQL
-- [ ] Hadoop Eco system
+- [x] GraphQL
+- [x] Hadoop Eco system
 - [ ] Spark이란
 - [ ] Spark은 어떻게  분산처리 할까 / shuffling
 - [ ] Spark - RDD
@@ -29,7 +29,7 @@
 - [ ] Hash
 - [ ] CORS
 - [ ] Transaction isolation level
-- [ ] http, http 요청 방식
+- [x] http
 - [ ] 3way handshake 4way 핸드쉐이크
 
 ### Book
@@ -57,3 +57,5 @@
   - Test library 고치자
 - [ ] Spring boot tutorial
 - [ ] Java/Kotlin stream API
+- [ ] Comparable vs Comparator
+
