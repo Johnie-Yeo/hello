@@ -30,6 +30,7 @@
 - [ ] CORS
 - [ ] Transaction isolation level
 - [x] http
+- [ ] http 동작 방식
 - [ ] 3way handshake 4way 핸드쉐이크
 
 ### Book
