@@ -46,6 +46,7 @@
 #### 면접 이후
 
 - [ ] XP
+- [ ] Quick sort가 가장 빠른 이유 -> 참조지역성: 넓은 범위에서 움직이지 않는다.
 - [ ] Clean code
 - [ ] Clean architecture
 - [ ] docker & kube
