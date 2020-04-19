@@ -9,7 +9,7 @@
 - [x] RESTful API
 - [x] GraphQL
 - [x] Hadoop Eco system
-- [ ] Spark이란
+- [x] Spark이란
 - [ ] Spark은 어떻게  분산처리 할까 / shuffling
 - [ ] Spark - RDD
 - [ ] Spark - DataFrame
@@ -30,8 +30,7 @@
 - [ ] CORS
 - [ ] Transaction isolation level
 - [x] http
-- [ ] http 동작 방식
-- [ ] 3way handshake 4way 핸드쉐이크
+- [x] 3way handshake 4way 핸드쉐이크
 
 ### Book
 
