@@ -10,7 +10,7 @@ icon: icon-html
 
 ---
 
-<p align="center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRMDEmsPmgL86ZykNjlqGUE0Lb4ya2lmjTI1LAp-VPLC1FG260A&usqp=CAU" style="width:50vw; height:auto;"/></p>
+<p align="center"><img src="{{ site.img_path }}/MapReduce/logo.png" style="width:50vw; height:auto;"/></p>
 
 <br>
 
@@ -20,7 +20,7 @@ icon: icon-html
 
 <br>
 
-<img src="https://www.talend.com/wp-content/uploads/what-is-mapreduce.jpg" style="width:70vw"/>
+<img src="{{ site.img_path }}/MapReduce/flow.jpg" style="width:70vw"/>
 
 <br>
 
@@ -42,7 +42,7 @@ MapReduce의 구성은 정말 이름 그대로 Map과 Reduce 입니다. Mapper�
 
 
 
-<img src="http://develop.sunshiny.co.kr/attach/1/3726677173.jpg" style="width:50vw">
+<img src="{{ site.img_path }}/MapReduce/shuffle.jpg" style="width:50vw">
 
 <br>
 
