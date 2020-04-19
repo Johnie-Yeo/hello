@@ -10,7 +10,7 @@ icon: icon-html
 
 ---
 
-<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Apache_Spark_logo.svg/1200px-Apache_Spark_logo.svg.png" style="width:40vw"/></p>
+<p align="center"><img src="{{ site.img_path }}/Spark/logo.png" style="width:40vw"/></p>
 
 
 
@@ -32,7 +32,7 @@ Spark은 대용량 데이터처리를 위한 오픈소스 병렬분산처리 플
 
 Spark의 공식적인 정의는 다음과 같습니다.
 
-*Apache Spark is a unified analytics engine for large-scale data processing*
+<p align="center"><img src="{{ site.img_path }}/REST/REST.jpeg" style="width: 50vw; height: auto;" /></p>
 
 여기서 조금 더 사용성에 있어 의역을 해보면 *for large scale*은 대용량보다 **데이터의 크기에 상관 없이**, *unified analytics engine* 은 **종합 선물세트** 같은 느낌으로 봐도 됩니다.
 
@@ -70,7 +70,7 @@ Spark이 동작하기 위한 전반적인 스택 구조는 다음과 같습니�
 
 <br>
 
-<img src="https://t1.daumcdn.net/cfile/tistory/2140BE3C555DFB5130" style="width:70vw"/>
+<img src="{{ site.img_path }}/Spark/stack_structure.png" style="width:70vw"/>
 
 <br>
 

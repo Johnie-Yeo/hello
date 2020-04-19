@@ -9,7 +9,7 @@ tags: [BackEnd, api, network, http, rest, restful]
 icon: icon-html
 ---
 
-<p align="center"><img src="https://miro.medium.com/max/1198/1*gV9AeJImpGRTlDs_560erw.png" style="width: 50vw; height: auto;" /></p>
+<p align="center"><img src="{{ site.img_path }}/REST/logo.png" style="width: 50vw; height: auto;" /></p>
 
 > [그런 REST API로 괜찮은가](https://youtu.be/RP_f5dMoHFc?t=0s) 영상을 기반으로 한 문서입니다.
 >
