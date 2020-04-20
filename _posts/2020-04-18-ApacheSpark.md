@@ -32,7 +32,7 @@ Spark은 대용량 데이터처리를 위한 오픈소스 병렬분산처리 플
 
 Spark의 공식적인 정의는 다음과 같습니다.
 
-<p align="center"><img src="{{ site.img_path }}/REST/REST.jpeg" style="width: 50vw; height: auto;" /></p>
+*Apache Spark is a unified analytics engine for large-scale data processing*
 
 여기서 조금 더 사용성에 있어 의역을 해보면 *for large scale*은 대용량보다 **데이터의 크기에 상관 없이**, *unified analytics engine* 은 **종합 선물세트** 같은 느낌으로 봐도 됩니다.
 
