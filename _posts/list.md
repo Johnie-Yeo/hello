@@ -2,7 +2,12 @@
 
 ### Language
 
-
+- [ ] Java/Kotlin generic 기본 정리
+- [ ] Java/Kotlin generic type erasure
+- [ ] Java/Kotlin generic refied
+- [ ] 나만의 테스트코드를 만들어보자
+- [ ] Java/Kotlin stream API
+- [ ] Comparable vs Comparator
 
 ### Back end
 
@@ -15,6 +20,7 @@
 - [ ] Spark - DataFrame
 - [ ] Cluster Managers 
 - [ ] YARN optimization
+- [ ] Spring boot tutorial
 
 ### Database
 
@@ -25,7 +31,7 @@
 
 ### CS
 
-- [ ] Quick sort
+- [ ] Quick sort가 가장 빠른 이유 -> 참조지역성: 넓은 범위에서 움직이지 않는다.
 - [ ] Hash
 - [ ] CORS
 - [ ] Transaction isolation level
@@ -34,29 +40,19 @@
 
 ### Book
 
-
-
-### etc
-
-
-
-----
-
-#### 면접 이후
-
 - [ ] XP
-- [ ] Quick sort가 가장 빠른 이유 -> 참조지역성: 넓은 범위에서 움직이지 않는다.
 - [ ] Clean code
 - [ ] Clean architecture
 - [ ] docker & kube
-- [ ] 프로젝트 정리 - 포트폴리오같이
+
+### etc
+
 - [ ] 익스플로러 쓰면 안되는 이유
-- [ ] Java/Kotlin generics
-  - 기본 정리
-  - type erasure
-  - refied
-  - Test library 고치자
-- [ ] Spring boot tutorial
-- [ ] Java/Kotlin stream API
-- [ ] Comparable vs Comparator
+
+### project
+
+- [ ] 오이마켓 포폴
+- [ ] 네이버 포폴
+
+
 
