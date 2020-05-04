@@ -37,6 +37,7 @@
 - [ ] Transaction isolation level
 - [x] http
 - [x] 3way handshake 4way 핸드쉐이크
+- [ ] SOLID 원칙
 
 ### Book
 
