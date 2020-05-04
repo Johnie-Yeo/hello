@@ -60,7 +60,7 @@ Pair<Integer, String> p2 = new Pair<>(2, "pear");
 boolean same = Util.compare(p1, p2);
 ```
 
-이런 기능을 *type inference*라고 하며 꺽쇠괄호를 통한 타입 명시 없이 generic 메서드를 일반 메서드처럼 사용할 수 있습니다. [Type Inference](https://docs.oracle.com/javase/tutorial/java/generics/genTypeInference.html)에서 이에 대해 더 자세히 설명합니다.
+이런 기능을 *type inference*라고 하며 꺽쇠괄호를 통한 타입 명시 없이 generic 메서드를 일반 메서드처럼 사용할 수 있습니다. [Type Inference](https://johnie-yeo.github.io/hello/language/2020/05/04/Java-Generics-6.html)에서 이에 대해 더 자세히 설명합니다.
 
 <br>
 

@@ -117,7 +117,7 @@ Java SE 7 이후로 컴파일러가 컨텍스트에서 type argument를 판단�
 Box<Integer> integerBox = new Box<>();
 ```
 
-diamond의 개념과 type 추론에 관한 더 자세한 정보는 [Type Inference](https://docs.oracle.com/javase/tutorial/java/generics/genTypeInference.html) 를 참조하세요.
+diamond의 개념과 type 추론에 관한 더 자세한 정보는 [Type Inference](https://johnie-yeo.github.io/hello/language/2020/05/04/Java-Generics-6.html) 를 참조하세요.
 
 <br>
 
