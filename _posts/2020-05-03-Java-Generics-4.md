@@ -72,7 +72,9 @@ public class NaturalNumber<T extends Integer> {
 
 <br>
 
-### Multiple Bounds
+## Multiple Bounds
+
+---
 
 앞의 예는 단일 bound를 이용한 타입 파라미터를 사용하는 것을 보여주지만, type parameter은 여러 bound를 가질 수 있습니다.
 

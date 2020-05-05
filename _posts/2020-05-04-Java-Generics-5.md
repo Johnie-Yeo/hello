@@ -59,7 +59,9 @@ public void boxTest(Box<Number> n) { /* ... */ }
 
 <br>
 
-### Generic Classes and Subtyping
+## Generic Classes and Subtyping
+
+---
 
 generic 클래스 혹은 인터테이스를 subtype으로 만들고 싶다면 extend 혹은 implement 함으로써 만들수 있습니다. 클래스 혹은 인터페이스간의 타입 파라미터사이의 관계는 extends, implements에 의해 결정됩니다.
 

@@ -13,7 +13,11 @@ icon: icon-html
 
 *generic type* 은 type이 파라미터로된 generic class 혹은 interface입니다. 다음의 `Box` 클래스는 해당 개념을 설명하기 위해 수정 될 클래스입니다. 
 
-### A Simple Box Class
+<br>
+
+## A Simple Box Class
+
+---
 
 모든 타입의 객체에서 작동하는 non-generic Box 클래스를 통해 시험하며 시작해보겠습니다. 이 클래스는 객체를 box에 추가하는 set과 객체를 가져오는 get, 이 두가지 메서드만 가집니다.
 
@@ -30,7 +34,9 @@ public class Box {
 
 <br>
 
-### A Generic Version of the Box Class
+## A Generic Version of the Box Class
+
+---
 
 generic class는 다음과 같이 정의됩니다.
 
@@ -66,7 +72,9 @@ public class Box<T> {
 
 <br>
 
-### Type Parameter Naming Conventions
+## Type Parameter Naming Conventions
+
+---
 
 컨벤션에 의해 타입 파라미터의 이름은 하나글자의 대문자입니다. 이것은 기존에 알려진 변수 네이밍 컨벤션과 큰 대조를 이룹니다. 이렇게 함으로써 얻어지는 장점은 타입 변수를 일반 클래스 혹은 인터페이스의 이름과 쉽게 구분할 수 있다는 것입니다.
 
@@ -83,7 +91,9 @@ public class Box<T> {
 
 <br>
 
-### Invoking and Instantiating a Generic Type
+## Invoking and Instantiating a Generic Type
+
+---
 
 generic Box 클래스를 코드에서 참조하기 위해서는 T를 Integer와 같이 구체으로 명시하는 *generic type invocation*(제네릭 타입 호출)을 해야 합니다.
 
@@ -109,7 +119,9 @@ Box<Integer> intergerBox = new Box<Integer>();
 
 <br>
 
-### The Diamond
+## The Diamond
+
+---
 
 Java SE 7 이후로 컴파일러가 컨텍스트에서 type argument를 판단하거나 유추할 수 있는 한, 일반 클래스의 생성자를 호출하기 위해 필요한 type argument를 empty set of type arguments (<>)로 쓸 수 있습니다. 이 꺽쇠 괄호 쌍을 비공식적으로는 `diamond`라고 합니다. 예를 들어 Box&lt;Integer&gt;의 인스턴스를 생성하기 위해 다음과 같이 쓸 수 있습니다.
 
@@ -121,7 +133,9 @@ diamond의 개념과 type 추론에 관한 더 자세한 정보는 [Type Inferen
 
 <br>
 
-### Multiple Type Parameters
+## Multiple Type Parameters
+
+---
 
 이전에 언급한것 처럼, generic class는 여러개의 타입 파라미터를 가질 수 있습니다. generic 인터페이스인 Pair를 implements하는 OrderedPair generic class가 예입니다.
 ```java
@@ -165,7 +179,9 @@ generic interface를 생성하기 위해서는 generic class의 컨벤션을 그
 
 <br>
 
-### Parameterized Types
+## Parameterized Types
+
+---
 
 타입 파라미터는 파라미터화된 타입(i.e. List&lt;String&gt;)가 올 수도 있습니다. 예를 들어 OrderedPair<K, V>는 다음과 같은 사용이 가능합니다.
 
@@ -228,7 +244,9 @@ rawBox.set(8);  // warning: unchecked invocation to set(T)
 
 <br>
 
-### Unchecked Error Messages
+## Unchecked Error Messages
+
+---
 
 앞서 언급한것처럼 레거시 코드와 generic 코드가 섞였을때 다음과 같은 경고메세지를 만나게 됩니다.
 

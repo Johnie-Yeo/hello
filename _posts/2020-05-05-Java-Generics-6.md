@@ -24,7 +24,9 @@ Serializable s = pick("d", new ArrayList<String>());
 
 <br>
 
-### Type Inference and Generic Methods
+## Type Inference and Generic Methods
+
+---
 
 [Generic Methods](https://johnie-yeo.github.io/hello/language/2020/05/03/Java-Generics-3.html)에서 type inference를 통해 generic 메서드가 일반 메서드처럼 꺽쇠 괄호 없이 사용가능하다고 했습니다. 다음의 [Box](https://docs.oracle.com/javase/tutorial/java/generics/examples/Box.java)클래스를 이용한 [Box Demo](https://docs.oracle.com/javase/tutorial/java/generics/examples/BoxDemo.java) 예제를 살펴보겠습니다.
 
@@ -81,7 +83,9 @@ BoxDemo.addBox(Integer.valueOf(20), listOfIntegerBoxes);
 
 <br>
 
-### Type Inference and Instantiation of Generic Classes
+## Type Inference and Instantiation of Generic Classes
+
+---
 
 컴파일러가 컨텍스트에서 type argument를 inference할수 있는 한, generic 클래스의 생성자를 호출할때 필요한 type argument를 빈 타입 파라미터(&lt;&gt;)로 쓸수 있습니다. 이 꺽쇠괄호 쌍을 비공식적으로는 diamond라고 합니다. 
 
@@ -105,7 +109,9 @@ Map<String, List<String>> myMap = new HashMap(); // unchecked conversion warning
 
 <br>
 
-### Type Inference and Generic Constructors of Generic and Non-Generic Classes
+## Type Inference and Generic Constructors of Generic and Non-Generic Classes
+
+---
 
 생성자는 generic 클래스, non-generic 클래스 모두에서 generic일 수 있습니다.(즉, 자체적인 타입 파라미터를 선언할 수 있습니다.) 다음 예제를 통해 살펴보겠습니다.
 
@@ -139,7 +145,9 @@ MyClass<Integer> myObject = new MyClass<>("");
 
 <br>
 
-### Target Types
+## Target Types
+
+---
 
 Java 컴파일러는 target typing을 활용하여 제네릭 메서드 호출의 타입 파라미터를 유추합니다.  표현식의 *target type*은 표현식이 나타나는 위치에 따라 Java 컴파일러가 예상하는 데이터 타입입니다. 다음에 정의된 Collections.emptyList 메서드를 예로 보겠습니다.
 
