@@ -40,7 +40,7 @@ class ClassName<T1, T2, ..., Tn>{
 }
 ```
 
-타입 파라미터의 자리는 꺽쇠(<>)로 구분되고 클래스 이름 뒤쪽에 위치합니다. 타입 파라미터(a.k.a. *type variables*)는 T1, T2, ... Tn 와 같이 지정됩니다.
+타입 파라미터의 자리는 꺽쇠(&lt;&gt;)로 구분되고 클래스 이름 뒤쪽에 위치합니다. 타입 파라미터(a.k.a. *type variables*)는 T1, T2, ... Tn 와 같이 지정됩니다.
 
 Box 클래스를 generics를 사용하도록 변경하기 위해서는, `public class Box` 부분의 코드를 `public class Box<T>` 와 같이 변경하여 generic type 선언을 만들어야 합니다. 이것은 type 변수 T를 소개하며 클래스 내부 어디에서라도 쓰일 수 있게 합니다.
 
@@ -72,7 +72,7 @@ public class Box<T> {
 
 일반적으로 사용되는 타입 파라미터의 이름은 다음과 같습니다.
 
-- E - Element(Java Collections Framework에서 많이 사용)
+- E - Element   (Java Collections Framework에서 많이 사용)
 - K - Key
 - N - Number
 - T - Type
@@ -95,13 +95,13 @@ Box<Integer> integerBox;
 
 > **Type Parameter and Type Argument Terminology(용어)**
 >
-> 많은 개발자들이 "type parameter(매개변수)"과 "type argument(인자)"라는 용어를 뒤섞어 사용하는데 이 용어들은 같은 뜻이 아닙니다. 코딩할때 type  argument는 파라미터화된 타입을 생성하기 위해 사용됩니다. 그러므로 Foo<T>의 T는 type parameter이고 Foo<String> f의 String은 type argument입니다. generics을 배우기 위해서는 이러한 용어의 정의를 준수해야합니다.
+> 많은 개발자들이 "type parameter(매개변수)"과 "type argument(인자)"라는 용어를 뒤섞어 사용하는데 이 용어들은 같은 뜻이 아닙니다. 코딩할때 type  argument는 파라미터화된 타입을 생성하기 위해 사용됩니다. 그러므로 Foo&lt;T&gt;의 T는 type parameter이고 Foo&lt;String&gt; f의 String은 type argument입니다. generics을 배우기 위해서는 이러한 용어의 정의를 준수해야합니다.
 
-다른 변수선언과 마찬가지로 이 코드는 Box 객체를 실제로 생성한 것이 아닙니다. 단순히 integerBox가 Box<Integer>을 읽기 위해 Integer의 Box 라는 참조를 가지고 있다는 것을 선언한 것 뿐입니다.
+다른 변수선언과 마찬가지로 이 코드는 Box 객체를 실제로 생성한 것이 아닙니다. 단순히 integerBox가 Box&lt;Integer&gt;을 읽기 위해 Integer의 Box 라는 참조를 가지고 있다는 것을 선언한 것 뿐입니다.
 
 generic type 호출은 일반적으로 파라미터화된 타입으로도 알려져있습니다.
 
-이 클래스를 인스턴스화하기 위해서는 보통처럼 `new`키워드를 사용하지만 <Integer>을 클래스 이름과 괄호 사이에 넣어줘야 합니다.
+이 클래스를 인스턴스화하기 위해서는 보통처럼 `new`키워드를 사용하지만 &lt;Integer&gt;을 클래스 이름과 괄호 사이에 넣어줘야 합니다.
 
 ```java
 Box<Integer> intergerBox = new Box<Integer>();
@@ -111,13 +111,13 @@ Box<Integer> intergerBox = new Box<Integer>();
 
 ### The Diamond
 
-Java SE 7 이후로 컴파일러가 컨텍스트에서 type argument를 판단하거나 유추할 수 있는 한, 일반 클래스의 생성자를 호출하기 위해 필요한 type argument를 empty set of type arguments (<>)로 쓸 수 있습니다. 이 꺽쇠 괄호 쌍을 비공식적으로는 `diamond`라고 합니다. 예를 들어 Box<Integer>의 인스턴스를 생성하기 위해 다음과 같이 쓸 수 있습니다.
+Java SE 7 이후로 컴파일러가 컨텍스트에서 type argument를 판단하거나 유추할 수 있는 한, 일반 클래스의 생성자를 호출하기 위해 필요한 type argument를 empty set of type arguments (<>)로 쓸 수 있습니다. 이 꺽쇠 괄호 쌍을 비공식적으로는 `diamond`라고 합니다. 예를 들어 Box&lt;Integer&gt;의 인스턴스를 생성하기 위해 다음과 같이 쓸 수 있습니다.
 
 ```java
 Box<Integer> integerBox = new Box<>();
 ```
 
-diamond의 개념과 type 추론에 관한 더 자세한 정보는 [Type Inference](https://johnie-yeo.github.io/hello/language/2020/05/04/Java-Generics-6.html) 를 참조하세요.
+diamond의 개념과 type 추론에 관한 더 자세한 정보는 [Type Inference](https://johnie-yeo.github.io/hello/language/2020/05/05/Java-Generics-6.html) 를 참조하세요.
 
 <br>
 
@@ -167,7 +167,7 @@ generic interface를 생성하기 위해서는 generic class의 컨벤션을 그
 
 ### Parameterized Types
 
-타입 파라미터는 파라미터화된 타입(i.e. List<String>)가 올 수도 있습니다. 예를 들어 OrderedPair<K, V>는 다음과 같은 사용이 가능합니다.
+타입 파라미터는 파라미터화된 타입(i.e. List&lt;String&gt;)가 올 수도 있습니다. 예를 들어 OrderedPair<K, V>는 다음과 같은 사용이 가능합니다.
 
 ```java
 OrderedPair<String, Box<Integer>> p = new OrderedPair<>("primes", new Box<Integer>(...));
@@ -186,19 +186,19 @@ public class Box<T> {
 }
 ```
 
-Box<T>의 파라미터화된 타입을 생성하기 위해서는 type parameter T에 실제 type argument를 사용해야합니다.
+Box&lt;T&gt;의 파라미터화된 타입을 생성하기 위해서는 type parameter T에 실제 type argument를 사용해야합니다.
 
 ```java
 Box<Integer> intBox = new Box<>();
 ```
 
-실제 type argument가 생략되면 Box<T>의 raw type이 생성됩니다.
+실제 type argument가 생략되면 Box&lt;T&gt;의 raw type이 생성됩니다.
 
 ```java
 Box rawBox = new Box();
 ```
 
-그러므로 Box는 generic type Box<T>의 raw type입니다. 하지만 non-generic 클래스나 인터페이스의 타입은 raw type이 아닙니다.
+그러므로 Box는 generic type Box&lt;T&gt;의 raw type입니다. 하지만 non-generic 클래스나 인터페이스의 타입은 raw type이 아닙니다.
 
 Raw type은 레거시 코드에서 많이 등장하는데 많은 API 클래스(Collections 클래스 등)가 JDK5.0 이전에는 generic이 아니였기 때문입니다. raw type을 사용할 때는 Object를 리턴하는 제네릭 이전의 동작을 만나게 됩니다. 이전 버전과 호환성을 위해 파라미터화된 타입을 raw type에 할당하는 것이 가능합니다.
 

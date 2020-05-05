@@ -43,7 +43,7 @@ box.add(new Double(10.1));  // OK
 public void boxTest(Box<Number> n) { /* ... */ }
 ```
 
-이 경우에는 어떤 인자가 허용이 될까요? 보이는 그대로 타입이 Box<Number>인 단일 인자가 허용될 것입니다. 하지만 이것이 의미하는 바는 뭘까요? Box<Integer> 혹은 Box<Double>과 같은 것은 허용될까요? 정답은 `NO` 입니다. Box<Integer> 와 Box<Double>은 Box<Number>의 subtype이 아니기 때문입니다.
+이 경우에는 어떤 인자가 허용이 될까요? 보이는 그대로 타입이 Box&lt;Number&gt;인 단일 인자가 허용될 것입니다. 하지만 이것이 의미하는 바는 뭘까요? Box&lt;Integer&gt; 혹은 Box&lt;Double&gt;과 같은 것은 허용될까요? 정답은 `NO` 입니다. Box&lt;Integer&gt; 와 Box&lt;Double&gt;은 Box&lt;Number&gt;의 subtype이 아니기 때문입니다.
 
 이거은 매우 generics 프로그래밍에서 일어나는 매우 흔한 오해이며 동시에 중요하게 배워야 할 개념입니다.
 
@@ -53,9 +53,9 @@ public void boxTest(Box<Number> n) { /* ... */ }
 
 > #### Note
 >
-> 두 구체적인 타입 A, B(ex. Number & Integer)에서 MyClass<A>와 MyClass<B>의 관계는 A와 B의 관계와 상관이 없습니다.  MyClass <A> 와 MyClass <B>의 공통 상위클래스는 Object입니다.
+> 두 구체적인 타입 A, B(ex. Number & Integer)에서 MyClass&lt;A&gt; 와 MyClass&lt;B&gt;의 관계는 A와 B의 관계와 상관이 없습니다.  MyClass &lt;A&gt; 와 MyClass &lt;B&gt;의 공통 상위클래스는 Object입니다.
 >
-> 두 타입 파라미터가 상관관계가 있을 때 두 generics를 subtype 관계로 만들고 싶다면 [Wildcards and Subtyping](https://docs.oracle.com/javase/tutorial/java/generics/subtyping.html)을 참조하세요.
+> 두 타입 파라미터가 상관관계가 있을 때 두 generics를 subtype 관계로 만들고 싶다면 [Wildcards and Subtyping](https://johnie-yeo.github.io/hello/language/2020/05/05/Java-Generics-7.html)을 참조하세요.
 
 <br>
 
@@ -63,7 +63,7 @@ public void boxTest(Box<Number> n) { /* ... */ }
 
 generic 클래스 혹은 인터테이스를 subtype으로 만들고 싶다면 extend 혹은 implement 함으로써 만들수 있습니다. 클래스 혹은 인터페이스간의 타입 파라미터사이의 관계는 extends, implements에 의해 결정됩니다.
 
-`Collections` 클래스를 예로 들겠습니다. ArrayList<E>는 List<E>를, List<E>는 Collection<E>를 각각 implements 합니다. 따라서 ArrayList<String>은 List<String>의 subtype이고 List<String>은 Collection<String>의 subtype입니다. type argument가 변경되지 않는 한, 타입간의 subtype 관계는 유지됩니다.
+`Collections` 클래스를 예로 들겠습니다. ArrayList&lt;E&gt;는 List&lt;E&gt;를, List&lt;E&gt;는 Collection&lt;E&gt;를 각각 implements 합니다. 따라서 ArrayList&lt;String&gt;은 List&lt;String&gt;의 subtype이고 List&lt;String&gt;은 Collection&lt;String&gt;의 subtype입니다. type argument가 변경되지 않는 한, 타입간의 subtype 관계는 유지됩니다.
 
 <p align="center"><img src="{{site.img_path}}/JavaGenerics/generics-sampleHierarchy.gif"/></p>
 
@@ -78,11 +78,11 @@ interface PayloadList<E,P> extends List<E> {
 }
 ```
 
-PayloadList의 다음 파라미터화는 List <String>의 subtype입니다.
+PayloadList의 다음 파라미터화는 List &lt;String&gt;의 subtype입니다.
 
-- PayloadList<String, String>
-- PayloadList<String, Integer>
-- PayloadList<String, Exception>
+- PayloadList&lt;String, String&gt;
+- PayloadList&lt;String, Integer&gt;
+- PayloadList&lt;String, Exception&gt;
 
 <p align="center"><img src="{{site.img_path}}/JavaGenerics/generics-payloadListHierarchy.gif" style="width:80vw"/></p>
 

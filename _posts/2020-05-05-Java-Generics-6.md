@@ -83,7 +83,7 @@ BoxDemo.addBox(Integer.valueOf(20), listOfIntegerBoxes);
 
 ### Type Inference and Instantiation of Generic Classes
 
-컴파일러가 컨텍스트에서 type argument를 inference할수 있는 한, generic 클래스의 생성자를 호출할때 필요한 type argument를 빈 타입 파라미터(<>)로 쓸수 있습니다. 이 꺽쇠괄호 쌍을 비공식적으로는 diamond라고 합니다. 
+컴파일러가 컨텍스트에서 type argument를 inference할수 있는 한, generic 클래스의 생성자를 호출할때 필요한 type argument를 빈 타입 파라미터(&lt;&gt;)로 쓸수 있습니다. 이 꺽쇠괄호 쌍을 비공식적으로는 diamond라고 합니다. 
 
 예를 들어 다음 변수 선언을 보겠습니다.
 
@@ -97,7 +97,7 @@ Map<String, List<String>> myMap = new HashMap<String, List<String>>();
 Map<String, List<String>> myMap = new HashMap<>();
 ```
 
-generic 클래스를 인스턴스화할 때 type inference를 적극적으로 활용하고 싶다면 diamond의 사용은 필수적입니다. 다음 예에서 컴파일러는 unchecked conversion warning을 생성하는데, `HashMap()` 생성자가 Map<String, List<String>> 타입이 아닌 HashMap raw type을 참조하기 때문입니다.
+generic 클래스를 인스턴스화할 때 type inference를 적극적으로 활용하고 싶다면 diamond의 사용은 필수적입니다. 다음 예에서 컴파일러는 unchecked conversion warning을 생성하는데, `HashMap()` 생성자가 Map&lt;String, List&lt;String&gt;&gt; 타입이 아닌 HashMap raw type을 참조하기 때문입니다.
 
 ```java
 Map<String, List<String>> myMap = new HashMap(); // unchecked conversion warning
@@ -123,15 +123,15 @@ MyClass 클래스에 대한 다음 인스턴스화를 보겠습니다.
 new MyClass<Integer>("")
 ```
 
-이 구문은 파라미터화된 타입 `MyClass<Integer>`의 인스턴스를 생성합니다. 이 구문은 Integer 타입을 generic 클래스 MyClass<X>의 X에 대한 타입으로서 명시적으로 지정한 것입니다. 주목할 점은 generic 클래스의 생성자는 T라는 공식 타입 파라미터를 가집니다. 이때 컴파일러는 제네릭 클래스의 생성자의 타입 파라미터 T에 대해 String 타입임을 추론합니다.(이 생성자의 실제 파라미터가 String 객체이기 때문)
+이 구문은 파라미터화된 타입 `MyClass<Integer>`의 인스턴스를 생성합니다. 이 구문은 Integer 타입을 generic 클래스 MyClass&lt;X&gt;의 X에 대한 타입으로서 명시적으로 지정한 것입니다. 주목할 점은 generic 클래스의 생성자는 T라는 공식 타입 파라미터를 가집니다. 이때 컴파일러는 제네릭 클래스의 생성자의 타입 파라미터 T에 대해 String 타입임을 추론합니다.(이 생성자의 실제 파라미터가 String 객체이기 때문)
 
-Java SE 7 이전에 릴리즈된 컴파일러는 제네릭 생성자의 실제 타입 파라미터를 제네릭 메서드에서와 같이 추론할 수 있었습니다. 하지만 SE 7 이후 컴파일러에서는 diamond(<>)를 사용했을 때, 인스턴스화된 제네릭 클래스의 실제 파라미터를 통해 추론이 가능합니다. 다음 예제를 보세요.
+Java SE 7 이전에 릴리즈된 컴파일러는 제네릭 생성자의 실제 타입 파라미터를 제네릭 메서드에서와 같이 추론할 수 있었습니다. 하지만 SE 7 이후 컴파일러에서는 diamond(&lt;&gt;)를 사용했을 때, 인스턴스화된 제네릭 클래스의 실제 파라미터를 통해 추론이 가능합니다. 다음 예제를 보세요.
 
 ```java
 MyClass<Integer> myObject = new MyClass<>("");
 ```
 
-이 예에서는 컴파일러는 generic 클래스 MyClass<X>의 공식 타입 파라미터 X가 Integer이라는 것을 추론합니다. 또 제네릭 클래스의 생성자의 공식 타입 파라미터 T는 String으로 추론됩니다.
+이 예에서는 컴파일러는 generic 클래스 MyClass&lt;X&gt;의 공식 타입 파라미터 X가 Integer이라는 것을 추론합니다. 또 제네릭 클래스의 생성자의 공식 타입 파라미터 T는 String으로 추론됩니다.
 
 > #### Note
 >
@@ -153,7 +153,7 @@ static <T> List<T> emptyList();
 List<String> listOne = Collections.emptyList();
 ```
 
-이 구문은 List<String>의 인스턴스가 오기를 기대하는데 이 List<String> 타입이 **target type**입니다. emptyList 메서드가 List<T> 타입을 반환하기 때문에 컴파일러는 type argument T가 String일 것으로 유추합니다. 이러한 작업은 Java SE 7, 8 모두에서 적용됩니다. 대안으로는 type witness를 이용하여 T를 명시적으로 나타내는 방법이 있습니다.
+이 구문은 List&lt;String&gt;의 인스턴스가 오기를 기대하는데 이 List&lt;String&gt; 타입이 **target type**입니다. emptyList 메서드가 List&lt;T&gt; 타입을 반환하기 때문에 컴파일러는 type argument T가 String일 것으로 유추합니다. 이러한 작업은 Java SE 7, 8 모두에서 적용됩니다. 대안으로는 type witness를 이용하여 T를 명시적으로 나타내는 방법이 있습니다.
 
 ```java
 List<String> listOne = Collections.<String>emptyList();
@@ -179,13 +179,13 @@ Java SE 7 컴파일러에서는 다음과 유사한 에러메세지가 생길 �
 List<Object> cannot be converted to List<String>
 ```
 
-컴파일러는 type argument T에 대한 값을 필요로 하므로 Object로부터 그 값이 시작됩니다. 결과적으로 Collections.emptyList의 호출은 processStringList 메서드와 호환되지 않는 List<Object> 타입이 반환됩니다. 따라서 Java SE7에서는 다음과 같이 type argument의 값을 설정해야 합니다.
+컴파일러는 type argument T에 대한 값을 필요로 하므로 Object로부터 그 값이 시작됩니다. 결과적으로 Collections.emptyList의 호출은 processStringList 메서드와 호환되지 않는 List&lt;Object&gt; 타입이 반환됩니다. 따라서 Java SE7에서는 다음과 같이 type argument의 값을 설정해야 합니다.
 
 ```java
 processStringList(Collections.<String>emptyList());
 ```
 
-하지만 Java SE 8부터는 이러한 작업이 필요 없습니다. target type이 무엇인지에 대한 개념은 `processStringList` 메서드 인자에서와 같이 메서드 인자를 포함하도록 확대되었습니다. 이 예에서 `processStringList` 은 argument 타입을 List<String>으로 요구합니다. Collections.emptyList 메서드는 List<T>를 반환하고 따라서 target type인 List<String>을 이용하여 컴파일러가 type argument T가 String일 것으로 유추하게 됩니다. 따라서 Java SE 8에서는 다음 구문또한 컴파일이 가능합니다.
+하지만 Java SE 8부터는 이러한 작업이 필요 없습니다. target type이 무엇인지에 대한 개념은 `processStringList` 메서드 인자에서와 같이 메서드 인자를 포함하도록 확대되었습니다. 이 예에서 `processStringList` 은 argument 타입을 List&lt;String&gt;으로 요구합니다. Collections.emptyList 메서드는 List&lt;T&gt;를 반환하고 따라서 target type인 List&lt;String&gt;을 이용하여 컴파일러가 type argument T가 String일 것으로 유추하게 됩니다. 따라서 Java SE 8에서는 다음 구문또한 컴파일이 가능합니다.
 
 ```java
 processStringList(Collections.emptyList());

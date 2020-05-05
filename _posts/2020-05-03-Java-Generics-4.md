@@ -114,7 +114,7 @@ public static <T> int countGreaterThan(T[] anArray, T elem) {
 }
 ```
 
-메서드 구현은 간단하지만 컴파일에는 실패하게됩니다. `>` 라는 연산자는 primitive 타입인 short, int, double, long, float, byte, char 등에서만 작동하기 때문입니다. 객체간 비교에 있어서는 > 를 사용할 수 없습니다. 이 문제를 해결하려면 Comparable<T> 인터페이스를 이용하여 type paramter bounded를 사용해야 합니다.
+메서드 구현은 간단하지만 컴파일에는 실패하게됩니다. `>` 라는 연산자는 primitive 타입인 short, int, double, long, float, byte, char 등에서만 작동하기 때문입니다. 객체간 비교에 있어서는 &gt; 를 사용할 수 없습니다. 이 문제를 해결하려면 Comparable&lt;T&gt; 인터페이스를 이용하여 type paramter bounded를 사용해야 합니다.
 
 ```java
 public interface Comparable<T> {
