@@ -2,13 +2,12 @@
 
 ### Language
 
-- [ ] Java 	: Generics
-- [ ] Kotlin  : Generics
-- [ ] Kotlin  : refied inline
-- [ ] Java     : Stream API
-- [ ] Java     : Comparable VS Comparator
-
-
+- [x] Java 	         : Generics
+- [ ] Kotlin           : Generics
+- [ ] Kotlin           : refied inline
+- [ ] Java              : Stream API
+- [ ] Java              : Comparable VS Comparator
+- [ ] Javascript    : Execution Context
 
 ### Back end
 
@@ -24,7 +23,6 @@
 - [ ] YARN resource optimization
 - [ ] Spring Boot tutorial
 - [ ] Deno Tutorial
-
 
 
 ### Database
@@ -51,6 +49,7 @@
 - [x] Network : http
 - [x] Network : 3way handshake 4way 핸드쉐이크
 - [ ] Programming : SOLID 원칙
+- [ ] Programming : 일급객체
 
 ### Book
 
